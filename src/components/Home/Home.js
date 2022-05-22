@@ -1,9 +1,16 @@
 import React from "react";
 
-import styles from "./Home.module.css";
+import Categories from "./Categories";
+import Main from "./Main";
 
 const Home = () => {
-  return <main className={styles.home}>Home</main>;
+  return (
+    <>
+      <Main />
+
+      <Categories />
+    </>
+  );
 };
 
 export default Home;

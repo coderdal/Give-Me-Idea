@@ -1,4 +1,80 @@
 .home {
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url(../../../public/assets/images/background.png) no-repeat center
+    center fixed;
+}
+
+.home .landing {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 1.6em;
+  padding: 0 15px;
+}
+
+.home .landing .text .colored {
+  color: #a8ff35;
+}
+
+.home .landing .smallText {
+  font-size: 0.6em;
+  color: #8b8b8bd3;
+  width: 85%;
+  margin: 10px auto;
+}
+
+.home .getStarted {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .getStarted .start {
+  position: relative;
+}
+
+.home .getStarted .start .button {
+  padding: 14px 38px;
+  border-radius: 40px;
+  background: #a8ff35;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.home .getStarted .start .info {
+  top: 40px;
+  left: 190px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 25%;
+}
+
+.home .getStarted .start .info .text {
+  position: absolute;
+  top: -35px;
+  left: -6px;
+  font-family: "Pacifico", cursive;
+  margin-left: -20px;
+  text-align: center;
+  width: 170px;
+  color: #c7c7c7ef;
+  font-size: 0.9em;
+}
+
+/* Categories */
+
+/* Media Queries */
+
+@media screen and (max-width: 480px) {
+  .home .getStarted .start .info {
+    display: none;
+  }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import styles from "./Header.module.css";
 
@@ -6,8 +6,21 @@ import { Link } from "react-router-dom";
 import { CodeIcon, MenuIcon } from "../assets/icons";
 
 const Header = () => {
+  const headerRef = useRef(null);
+
+  const handleScroll = (e) => {
+    if (e.currentTarget.scrollY > 100) {
+      console.log("I work");
+      headerRef.current.classList.add(styles.scrolled);
+    } else {
+      headerRef.current.classList.remove(styles.scrolled);
+    }
+  };
+
+  window.addEventListener("scroll", (e) => handleScroll(e));
+
   return (
-    <header className={styles.header}>
+    <header ref={headerRef} className={styles.header}>
       <div className={styles.brand}>
         <Link to="/">
           <div className={styles.brandLogo}>

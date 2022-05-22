@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import { ArrowIcon } from "../assets/icons";
+import { ArrowIcon, CssIcon, JavaScriptIcon, ReactIcon } from "../assets/icons";
 
 import styles from "./Home.module.css";
 
@@ -25,6 +26,23 @@ const Main = () => {
             <ArrowIcon />
           </div>
           <button className={styles.button}>Get Started 🔥</button>
+        </div>
+      </div>
+      <div className={styles.quickButtons}>
+        <div className={styles.button}>
+          <Link to="/javascript">
+            <JavaScriptIcon /> JavaScript
+          </Link>
+        </div>
+        <div className={styles.button}>
+          <Link to="/react">
+            <ReactIcon /> React
+          </Link>
+        </div>
+        <div className={styles.button}>
+          <Link to="/css">
+            <CssIcon /> CSS
+          </Link>
         </div>
       </div>
     </main>

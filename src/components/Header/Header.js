@@ -10,7 +10,6 @@ const Header = () => {
 
   const handleScroll = (e) => {
     if (e.currentTarget.scrollY > 100) {
-      console.log("I work");
       headerRef.current.classList.add(styles.scrolled);
     } else {
       headerRef.current.classList.remove(styles.scrolled);

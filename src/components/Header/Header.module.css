@@ -1,0 +1,104 @@
+.header {
+  padding: 0 80px;
+  height: 100px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .brand {
+  font-family: "Berkshire Swash", cursive;
+  height: 100%;
+}
+
+.header .brand a {
+  color: rgb(238, 238, 238);
+  text-decoration: none;
+  display: flex;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8em;
+}
+
+.header .brand a svg {
+  width: 40px;
+  height: 40px;
+}
+
+.header nav .navList {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header nav .navList li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 200ms opacity ease;
+  font-weight: 500;
+}
+
+.header nav .navList li a:hover {
+  opacity: 0.8;
+}
+
+.header nav .navList li .contact {
+  background: #fff;
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.header .mobileMenu button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.header .mobileMenu {
+  display: none;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1035px) {
+  .header {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .header .brand a h1 {
+    font-size: 1.8em;
+  }
+  .header nav .navList {
+    gap: 15px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .header .brand a h1 {
+    font-size: 1.7em;
+  }
+  .header nav .navList {
+    gap: 12px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 715px) {
+  .header nav {
+    display: none;
+  }
+  .header .mobileMenu {
+    display: block;
+  }
+}

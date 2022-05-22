@@ -25,7 +25,9 @@ const Main = () => {
             <span className={styles.text}>Click here and find cool ideas</span>
             <ArrowIcon />
           </div>
-          <button className={styles.button}>Get Started 🔥</button>
+          <a href="#categories" className={styles.button}>
+            Get Started 🔥
+          </a>
         </div>
       </div>
       <div className={styles.quickButtons}>

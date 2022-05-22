@@ -46,7 +46,7 @@ const Header = () => {
             <Link to="angular">Angular JS</Link>
           </li>
           <li>
-            <Link to="node">Node JS</Link>
+            <Link to="svelte">Svelte JS</Link>
           </li>
           <li>
             <a

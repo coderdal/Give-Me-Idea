@@ -49,12 +49,7 @@ const Header = () => {
             <Link to="svelte">Svelte JS</Link>
           </li>
           <li>
-            <a
-              href="https://linkedin.com/in/muhammederdal"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.contact}
-            >
+            <a href="#contact" className={styles.contact}>
               Contact
             </a>
           </li>

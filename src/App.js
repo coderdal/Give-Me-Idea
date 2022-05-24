@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
+import Idea from "./components/Idea/Idea";
 
 // import pages
 import Angular from "./components/Pages/Angular/Angular";
@@ -20,6 +21,8 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
+
+        <Route path="idea/:id" element={<Idea />} />
 
         <Route path="/javascript" element={<JavaScript />} />
         <Route path="/angular" element={<Angular />} />

@@ -5,6 +5,8 @@ import axios from "axios";
 
 import globalStyles from "../globalStyles.module.css";
 
+import { AngularIcon } from "../../assets/icons";
+
 const Angular = () => {
   const [ideas, setIdeas] = useState([]);
 
@@ -32,7 +34,9 @@ const Angular = () => {
               title={item.title}
               image={item.image}
               id={item.id}
-            />
+            >
+              <AngularIcon />
+            </Card>
           );
         })}
       </div>

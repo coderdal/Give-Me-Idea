@@ -5,6 +5,8 @@ import axios from "axios";
 
 import globalStyles from "../globalStyles.module.css";
 
+import { SvelteIcon } from "../../assets/icons";
+
 const Svelte = () => {
   const [ideas, setIdeas] = useState([]);
 
@@ -32,7 +34,9 @@ const Svelte = () => {
               title={item.title}
               image={item.image}
               id={item.id}
-            />
+            >
+              <SvelteIcon />
+            </Card>
           );
         })}
       </div>

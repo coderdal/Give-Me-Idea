@@ -5,6 +5,8 @@ import axios from "axios";
 
 import globalStyles from "../globalStyles.module.css";
 
+import { VueIcon } from "../../assets/icons";
+
 const Vue = () => {
   const [ideas, setIdeas] = useState([]);
 
@@ -32,7 +34,9 @@ const Vue = () => {
               title={item.title}
               image={item.image}
               id={item.id}
-            />
+            >
+              <VueIcon />
+            </Card>
           );
         })}
       </div>

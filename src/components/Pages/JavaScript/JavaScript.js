@@ -5,6 +5,8 @@ import axios from "axios";
 
 import globalStyles from "../globalStyles.module.css";
 
+import { JavaScriptIcon } from "../../assets/icons";
+
 const JavaScript = () => {
   const [ideas, setIdeas] = useState([]);
 
@@ -32,7 +34,9 @@ const JavaScript = () => {
               title={item.title}
               image={item.image}
               id={item.id}
-            />
+            >
+              <JavaScriptIcon />
+            </Card>
           );
         })}
       </div>

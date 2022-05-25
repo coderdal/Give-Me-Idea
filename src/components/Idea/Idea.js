@@ -11,12 +11,15 @@ const Idea = () => {
   const { id } = useParams();
 
   const [idea, setIdea] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
       try {
         const response = await axios.get(`http://localhost:3001/idea/${id}`);
-        setIdea(response.data[0]);
+        await setIdea(response.data[0]);
+        console.log(response);
+        await setIsLoading(false);
       } catch (error) {
         console.error(error);
       }
@@ -25,7 +28,9 @@ const Idea = () => {
     getData();
   }, [id]);
 
-  return (
+  return isLoading ? (
+    <h1>Loading</h1>
+  ) : (
     <section className={styles.idea}>
       <button type="submit" onClick={() => navigate(-1)}>
         go back

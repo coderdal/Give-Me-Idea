@@ -3,15 +3,19 @@ import { Link } from "react-router-dom";
 
 import globalStyles from "./globalStyles.module.css";
 
-const Card = ({ image, title, description, id }) => {
+const Card = ({ image, title, id }) => {
   return (
     <>
-      <div className={globalStyles.card}>
-        <Link to={`/idea/${id}`}>
-          <img src={image} alt={title} />
-          <h3>{title}</h3>
-        </Link>
-      </div>
+      <Link to={`/idea/${id}`}>
+        <div className={globalStyles.card}>
+          <div className={globalStyles.image}>
+            <img src={image} alt={title} />
+          </div>
+          <div className={globalStyles.info}>
+            <h3>{title}</h3>
+          </div>
+        </div>
+      </Link>
     </>
   );
 };

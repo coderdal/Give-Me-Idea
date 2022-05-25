@@ -5,6 +5,8 @@ import axios from "axios";
 
 import globalStyles from "../globalStyles.module.css";
 
+import { CssIcon } from "../../assets/icons";
+
 const CSS = () => {
   const [ideas, setIdeas] = useState([]);
 
@@ -32,7 +34,9 @@ const CSS = () => {
               title={item.title}
               image={item.image}
               id={item.id}
-            />
+            >
+              <CssIcon />
+            </Card>
           );
         })}
       </div>

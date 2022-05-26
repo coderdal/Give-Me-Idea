@@ -25,7 +25,7 @@ const Angular = () => {
 
   return (
     <section className={globalStyles.mainSection}>
-      <h2 className={globalStyles.title}>HTML - CSS Project Ideas</h2>
+      <h2 className={globalStyles.title}>Angular Project Ideas</h2>
       <div className={globalStyles.cards}>
         {ideas.map((item) => {
           return (

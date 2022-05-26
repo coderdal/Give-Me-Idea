@@ -44,8 +44,22 @@ const Idea = () => {
         </div>
         <div className={styles.details}>
           <h1>{idea.title}</h1>
-          <p>{idea.description}</p>
-          <p>{idea.note}</p>
+          <p>
+            <span>Summary: </span>
+            {idea.description}
+          </p>
+          <p>
+            <span>Task: </span>
+            {idea.task}
+          </p>
+          <p>
+            <span>Challenge: </span>
+            {idea.challenge}
+          </p>
+          <p>
+            <span>Note: </span>
+            {idea.note}
+          </p>
           <h3>Links may be useful:</h3>
           <ul>
             {idea.related.map((link, index) => {

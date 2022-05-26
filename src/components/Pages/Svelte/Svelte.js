@@ -12,7 +12,9 @@ const Svelte = () => {
 
   const getData = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/svelte");
+      const response = await axios.get(
+        "https://givemeidea.herokuapp.com/svelte"
+      );
       setIdeas(response.data[0].data);
     } catch (error) {
       console.error(error);

@@ -12,7 +12,9 @@ const ReactJs = () => {
 
   const getData = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/react");
+      const response = await axios.get(
+        "https://givemeidea.herokuapp.com/react"
+      );
       setIdeas(response.data[0].data);
     } catch (error) {
       console.error(error);

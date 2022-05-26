@@ -12,7 +12,9 @@ const Angular = () => {
 
   const getData = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/angular");
+      const response = await axios.get(
+        "https://givemeidea.herokuapp.com/angular"
+      );
       setIdeas(response.data[0].data);
     } catch (error) {
       console.error(error);

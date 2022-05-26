@@ -28,8 +28,6 @@ const Idea = () => {
     getData();
   }, [id]);
 
-  window.scrollTo(0, 0);
-
   return isLoading ? (
     <h1>Loading</h1>
   ) : (

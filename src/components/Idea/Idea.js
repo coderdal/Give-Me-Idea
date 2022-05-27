@@ -17,7 +17,9 @@ const Idea = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/idea/${id}`);
+        const response = await axios.get(
+          `https://givemeidea.herokuapp.com/idea/${id}`
+        );
         await setIdea(response.data[0]);
         await setIsLoading(false);
       } catch (error) {

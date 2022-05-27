@@ -12,7 +12,9 @@ const Vue = () => {
 
   const getData = async () => {
     try {
-      const response = await axios.get("https://givemeidea.herokuapp.com/vue");
+      const response = await axios.get(
+        "https://givemeidea.herokuapp.com/ideas/vue"
+      );
       setIdeas(response.data[0].data);
     } catch (error) {
       console.error(error);

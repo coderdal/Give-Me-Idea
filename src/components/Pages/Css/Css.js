@@ -12,8 +12,10 @@ const CSS = () => {
 
   const getData = async () => {
     try {
-      const response = await axios.get("https://givemeidea.herokuapp.com/css");
-      setIdeas(response.data[0].data);
+      const response = await axios.get(
+        "https://givemeidea.herokuapp.com/ideas/css"
+      );
+      setIdeas(response.data.data);
     } catch (error) {
       console.error(error);
     }

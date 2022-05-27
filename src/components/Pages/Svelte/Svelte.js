@@ -13,7 +13,7 @@ const Svelte = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "https://givemeidea.herokuapp.com/svelte"
+        "https://givemeidea.herokuapp.com/ideas/svelte"
       );
       setIdeas(response.data[0].data);
     } catch (error) {

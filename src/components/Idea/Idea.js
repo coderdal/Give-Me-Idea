@@ -6,6 +6,7 @@ import styles from "./Idea.module.css";
 
 import axios from "axios";
 import { ArrowBackIcon } from "../assets/icons";
+import IdeaSkeleton from "./IdeaSkeleton";
 
 const Idea = () => {
   const navigate = useNavigate();
@@ -31,7 +32,10 @@ const Idea = () => {
   }, [id]);
 
   return isLoading ? (
-    <h1>Loading</h1>
+    <section className={styles.ideaSkeleton}>
+      <h1>Content is loading...</h1>
+      <IdeaSkeleton />
+    </section>
   ) : (
     <section className={styles.ideaSection}>
       <div className={styles.previousPage} onClick={() => navigate(-1)}>
